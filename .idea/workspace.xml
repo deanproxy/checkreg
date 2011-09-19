@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de4d9156-deaf-4265-84cc-6f073d84ca05" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/application.js" afterPath="$PROJECT_DIR$/static/js/application.js" />
-    </list>
+    <list default="true" id="de4d9156-deaf-4265-84cc-6f073d84ca05" name="Default" comment="" />
     <ignored path="checkreg.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="49" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
+            <state line="19" column="0" selection-start="388" selection-end="553" vertical-scroll-proportion="0.69174755">
               <folding />
             </state>
           </provider>
@@ -83,6 +81,15 @@
         <entry file="file://$PROJECT_DIR$/expenses/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="5" column="70" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="35" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -124,10 +131,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="35" selection-start="2574" selection-end="2574" vertical-scroll-proportion="0.13533835">
+            <state line="87" column="35" selection-start="2574" selection-end="2574" vertical-scroll-proportion="-50.192307">
               <folding />
             </state>
           </provider>
@@ -576,13 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="35" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/expenses/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="11" selection-start="106" selection-end="106" vertical-scroll-proportion="0.14117648">
@@ -639,20 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/expenses/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="70" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="49" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django.wsgi">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="43" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
@@ -662,7 +648,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="35" selection-start="2574" selection-end="2574" vertical-scroll-proportion="0.13533835">
+        <state line="87" column="35" selection-start="2574" selection-end="2574" vertical-scroll-proportion="-50.192307">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expenses/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="70" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="35" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="388" selection-end="553" vertical-scroll-proportion="0.69174755">
           <folding />
         </state>
       </provider>
