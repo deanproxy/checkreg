@@ -2,7 +2,7 @@
 import os
 import django
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 DJANGO_ROOT = os.path.dirname(os.path.realpath(django.__file__))
@@ -26,7 +26,7 @@ DATABASES = {
 }
 
 # If we're not in DEBUG mode, consider this production
-if not DEBUG:
+if DEBUG:
 	DATABASES = {
 		'default': {
 			'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
