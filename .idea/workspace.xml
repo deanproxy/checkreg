@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de4d9156-deaf-4265-84cc-6f073d84ca05" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django.wsgi" afterPath="$PROJECT_DIR$/django.wsgi" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/application.js" afterPath="$PROJECT_DIR$/static/js/application.js" />
     </list>
     <ignored path="checkreg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,10 +88,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="django.wsgi" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="django.wsgi" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django.wsgi">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="43" selection-start="159" selection-end="159" vertical-scroll-proportion="0.21176471">
+            <state line="6" column="43" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -124,10 +124,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="35" selection-start="2432" selection-end="2432" vertical-scroll-proportion="18.115385">
+            <state line="87" column="35" selection-start="2574" selection-end="2574" vertical-scroll-proportion="0.13533835">
               <folding />
             </state>
           </provider>
@@ -157,9 +157,9 @@
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/templates/500.html" />
         <option value="$PROJECT_DIR$/globaltags/__init__.py" />
-        <option value="$PROJECT_DIR$/static/js/application.js" />
         <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/django.wsgi" />
+        <option value="$PROJECT_DIR$/static/js/application.js" />
       </list>
     </option>
   </component>
@@ -639,13 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="35" selection-start="2432" selection-end="2432" vertical-scroll-proportion="18.115385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/expenses/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="70" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
@@ -662,7 +655,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/django.wsgi">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="43" selection-start="159" selection-end="159" vertical-scroll-proportion="0.21176471">
+        <state line="6" column="43" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="35" selection-start="2574" selection-end="2574" vertical-scroll-proportion="0.13533835">
           <folding />
         </state>
       </provider>

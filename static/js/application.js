@@ -85,7 +85,7 @@ function getExpenses(callback) {
 var jQT = new $.jQTouch({
 	icon: '/static/images/money.jpg',
 	addGlossToIcon: false,
-	startupScreen: 'loading.png',
+	startupScreen: '/static/images/loading.png',
 	statusBar: 'black',
 	touchSelector: 'li',
 	preloadImages:['/static/images/loading.png', '/static/images/spinner2.gif', '/static/images/spinner.gif',
