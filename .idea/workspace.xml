@@ -74,16 +74,25 @@
       <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="68" selection-start="606" selection-end="606" vertical-scroll-proportion="0.0">
+            <state line="21" column="49" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="django.wsgi" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/expenses/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="70" selection-start="272" selection-end="272" vertical-scroll-proportion="0.1764706">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="django.wsgi" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django.wsgi">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="58" selection-start="73" selection-end="73" vertical-scroll-proportion="0.03529412">
+            <state line="1" column="50" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -568,13 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/expenses/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="70" selection-start="272" selection-end="272" vertical-scroll-proportion="0.1764706">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="35" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
@@ -645,16 +647,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
+    <entry file="file://$PROJECT_DIR$/django.wsgi">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="68" selection-start="606" selection-end="606" vertical-scroll-proportion="0.0">
+        <state line="1" column="50" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django.wsgi">
+    <entry file="file://$PROJECT_DIR$/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="58" selection-start="73" selection-end="73" vertical-scroll-proportion="0.03529412">
+        <state line="21" column="49" selection-start="458" selection-end="458" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expenses/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="70" selection-start="272" selection-end="272" vertical-scroll-proportion="0.1764706">
           <folding />
         </state>
       </provider>

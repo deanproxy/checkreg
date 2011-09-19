@@ -19,7 +19,7 @@ MANAGERS = ADMINS
 if os.getenv('DJANGO_RUN_ENV', '') == 'production':
 	DATABASES = {
 		'default': {
-			'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+			'ENGINE': 'django.db.backends.mysql',
 			'OPTIONS': {
 				'read_default_file': '/var/www/siteconfigs/checkreg/mysql.cnf'
 			}
@@ -117,15 +117,15 @@ MIDDLEWARE_CLASSES = (
 #    'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'checkreg.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = (
 	os.path.join(SITE_ROOT, 'templates'),
 )
 
 INSTALLED_APPS = (
-	'checkreg.expenses',
-	'checkreg.globaltags',
+	'expenses',
+	'globaltags',
 #    'django.contrib.auth',
 #    'django.contrib.contenttypes',
 #    'django.contrib.sessions',
