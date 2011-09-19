@@ -29,7 +29,7 @@ function displayExpenses(data, start, total) {
 			lastExpenseDate = expense.createdAt;
 		}
 		line = '<li>' + expense.description + '<small ';
-		if (expense.deposit) {
+		if (expense.amount > 0) {
 			line += 'class="positive"';
 		}
 		line += '>';

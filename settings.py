@@ -15,15 +15,26 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'checkreg.db',                      # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
-    }
+	'default': {
+		'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+		'NAME': 'checkreg.db',                      # Or path to database file if using sqlite3.
+		'USER': '',                      # Not used with sqlite3.
+		'PASSWORD': '',                  # Not used with sqlite3.
+		'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+		'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+	}
 }
+
+# If we're not in DEBUG mode, consider this production
+if not DEBUG:
+	DATABASES = {
+		'default': {
+			'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+			'OPTIONS': {
+				'read_default_file': os.path.join(SITE_ROOT, 'mysql.cnf')
+			}
+		}
+	}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name

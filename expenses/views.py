@@ -35,8 +35,7 @@ def list(request):
 			'id': expense.id,
 			'createdAt': expense.created_at.strftime("%b %d, %Y"),
 			'description': expense.description,
-			'amount': expense.amount,
-			'deposit': expense.deposit
+			'amount': expense.amount
 		})
 	return HttpResponse(simplejson.dumps(json), mimetype='application/json')
 
@@ -44,20 +43,20 @@ def create(request):
 	""" Create an expense. Update the current Balance. """
 
 	status = 201
-	form = ExpenseForm(request.POST)
+	form_data = request.POST.copy()
+	# Make sure the amount reflects whether we're a deposit or not...
+	if not form_data['deposit']:
+		form_data['amount'] = -float(form_data['amount'])
+	form = ExpenseForm(form_data)
 	if form.is_valid():
 		expense = form.save()
 		try:
 			balance = Balance.objects.get(pk=1)
 		except Balance.DoesNotExist:
-			# We're just now starting the app or something happen to the db, create the expense record.
+			# We're just now starting the app or something happened to the db, create the expense record.
 			balance = Balance.objects.create(amount=0.0)
 
-		# Update the total amount depending on what type of transaction
-		if expense.deposit:
-			balance.amount += expense.amount
-		else:
-			balance.amount -= expense.amount
+		balance.amount += expense.amount
 		balance.save()
 	else:
 		status = 500
@@ -72,10 +71,7 @@ def destroy(request, id):
 	try:
 		# Make sure to update balance depending on the transaction type.
 		balance = Balance.objects.get(pk=1)
-		if expense.deposit:
-			balance.amount -= expense.amount
-		else:
-			balance.amount += expense.amount
+		balance.amount -= expense.amount
 		balance.save()
 		expense.delete()
 	except:

@@ -68,10 +68,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/expenses/forms.py">
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="11" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
+            <state line="33" column="71" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.7281553">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/expenses/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="36" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -80,7 +89,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/expenses/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="22" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
+            <state line="5" column="32" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -89,34 +98,7 @@
       <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="34" selection-start="2427" selection-end="2427" vertical-scroll-proportion="-4.9615383">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="35" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/expenses/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="70" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/expenses/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="75" selection-start="873" selection-end="873" vertical-scroll-proportion="0.3317647">
+            <state line="31" column="30" selection-start="1070" selection-end="1070" vertical-scroll-proportion="-9.153846">
               <folding />
             </state>
           </provider>
@@ -136,11 +118,11 @@
         <option value="$PROJECT_DIR$/expenses/urls.py" />
         <option value="$PROJECT_DIR$/urls.py" />
         <option value="$PROJECT_DIR$/expenses/forms.py" />
-        <option value="$PROJECT_DIR$/expenses/models.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/settings.py" />
+        <option value="$PROJECT_DIR$/expenses/models.py" />
         <option value="$PROJECT_DIR$/static/js/application.js" />
         <option value="$PROJECT_DIR$/expenses/views.py" />
+        <option value="$PROJECT_DIR$/settings.py" />
       </list>
     </option>
   </component>
@@ -268,6 +250,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode.General" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -556,6 +539,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/expenses/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="70" selection-start="272" selection-end="272" vertical-scroll-proportion="0.1764706">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="35" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0">
@@ -565,21 +555,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/expenses/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="11" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenses/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="22" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenses/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="70" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
+        <state line="4" column="11" selection-start="106" selection-end="106" vertical-scroll-proportion="0.14117648">
           <folding />
         </state>
       </provider>
@@ -591,23 +567,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
+    <entry file="file://$PROJECT_DIR$/expenses/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="0" selection-start="3750" selection-end="3750" vertical-scroll-proportion="0.0">
+        <state line="5" column="32" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="34" selection-start="2427" selection-end="2427" vertical-scroll-proportion="-4.9615383">
+        <state line="31" column="30" selection-start="1070" selection-end="1070" vertical-scroll-proportion="-9.153846">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/expenses/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="75" selection-start="873" selection-end="873" vertical-scroll-proportion="0.3317647">
+        <state line="37" column="36" selection-start="1162" selection-end="1162" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="71" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.7281553">
           <folding />
         </state>
       </provider>
