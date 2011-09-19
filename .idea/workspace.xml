@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="de4d9156-deaf-4265-84cc-6f073d84ca05" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/django.wsgi" afterPath="$PROJECT_DIR$/django.wsgi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.py" afterPath="$PROJECT_DIR$/settings.py" />
     </list>
     <ignored path="checkreg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,19 +79,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/expenses/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="70" selection-start="272" selection-end="272" vertical-scroll-proportion="0.1764706">
+            <state line="5" column="70" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="django.wsgi" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="django.wsgi" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/django.wsgi">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="50" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
+            <state line="6" column="40" selection-start="156" selection-end="156" vertical-scroll-proportion="0.21176471">
               <folding />
             </state>
           </provider>
@@ -159,8 +158,8 @@
         <option value="$PROJECT_DIR$/templates/500.html" />
         <option value="$PROJECT_DIR$/globaltags/__init__.py" />
         <option value="$PROJECT_DIR$/static/js/application.js" />
-        <option value="$PROJECT_DIR$/django.wsgi" />
         <option value="$PROJECT_DIR$/settings.py" />
+        <option value="$PROJECT_DIR$/django.wsgi" />
       </list>
     </option>
   </component>
@@ -647,9 +646,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/django.wsgi">
+    <entry file="file://$PROJECT_DIR$/expenses/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="50" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
+        <state line="5" column="70" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -661,9 +660,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/expenses/urls.py">
+    <entry file="file://$PROJECT_DIR$/django.wsgi">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="70" selection-start="272" selection-end="272" vertical-scroll-proportion="0.1764706">
+        <state line="6" column="40" selection-start="156" selection-end="156" vertical-scroll-proportion="0.21176471">
           <folding />
         </state>
       </provider>
