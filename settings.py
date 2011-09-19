@@ -2,7 +2,7 @@
 import os
 import django
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 DJANGO_ROOT = os.path.dirname(os.path.realpath(django.__file__))
