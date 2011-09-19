@@ -76,8 +76,8 @@ function displayExpenses(data, start, total) {
 }
 
 function getExpenses(callback) {
-	$.getJSON('/expenses/list/', {offset:0, max:2}, function(data) {
-		displayExpenses(data, 0, 2);
+	$.getJSON('/expenses/list/', {offset:0, max:30}, function(data) {
+		displayExpenses(data, 0, 30);
 		callback();
 	});
 }
