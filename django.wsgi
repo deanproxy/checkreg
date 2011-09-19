@@ -1,5 +1,5 @@
 import os, sys
-path = '/var/www/checkreg'
+path = '/var/www/'
 
 if path not in sys.path:
 	sys.path.append(path)
