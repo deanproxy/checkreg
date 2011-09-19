@@ -91,7 +91,7 @@
       <file leaf-file-name="django.wsgi" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/django.wsgi">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="40" selection-start="156" selection-end="156" vertical-scroll-proportion="0.21176471">
+            <state line="6" column="43" selection-start="159" selection-end="159" vertical-scroll-proportion="0.21176471">
               <folding />
             </state>
           </provider>
@@ -662,7 +662,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/django.wsgi">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="40" selection-start="156" selection-end="156" vertical-scroll-proportion="0.21176471">
+        <state line="6" column="43" selection-start="159" selection-end="159" vertical-scroll-proportion="0.21176471">
           <folding />
         </state>
       </provider>
