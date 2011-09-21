@@ -3,81 +3,82 @@
 <html>
 <head>
 	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<title>Budget</title>
-	{% css 'jqtouch.min.css' %}
-	{% css 'themes/apple/theme.css' %}
+{#	{% css 'jqtouch.min.css' %}#}
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.css" />
+{#	{% css 'themes/apple/theme.css' %}#}
 	{% css 'budget.css' %}
 
-	{% js 'jquery-1.4.2.min.js' %}
+	{% js 'jquery-1.6.4.min.js' %}
 	{% js 'jquery-ui-1.8.2.min.js' %}
-	{% js 'jqtouch.min.js' %}
+{#	{% js 'jqtouch.min.js' %}#}
 	{% js 'jquery.validate.min.js' %}
 	{% js 'additional-methods.js' %}
+
+	<script src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
 	{% js 'application.js' %}
 
 </head>
 
 <body>
-<div id="home" class="current page">
-	<div class="toolbar">
+<div id="home" data-role="page" role="main">
+	<div data-role="header">
 		<h1>Budget</h1>
-		<a href="#add" class="add slideup">+</a>
+		<a href="#add" data-role="button" data-inlne="true" class="add slideup">+</a>
 	</div>
-	<ul>
-		<li id="total">Total <small><strong></strong></small></li>
-	</ul>
-	<ul>
-		<li class="arrow"><a href="#" id="goToExpenses">Expenses</a></li>
-	</ul>
+	<div data-role="content">
+		<ul data-role="listview">
+			<li id="total">Total <small><strong></strong></small></li>
+		</ul>
+		<ul data-role="listview">
+			<li class="arrow"><a href="#" id="goToExpenses">Expenses</a></li>
+		</ul>
+	</div>
 </div>
 
-<div id="expenses">
-	<div class="toolbar">
+<div id="expenses" data-role="page">
+	<div data-role="header">
 		<h1>Expenses</h1>
-		<a href="#" class="back">Back</a>
-		<a href="#add" class="add slideup">+</a>
+		<a href="#" data-role="button" data-rel="back">Back</a>
+		<a href="#add" data-role="button" data-transition="slideup">+</a>
 	</div>
-	<ul class="edgetoedge">
-		%{--Filled in by AJAX  --}%
-	</ul>
+	<div data-role="content">
+		<ul data-role="listview">
+			{# --Filled in by AJAX  %#}
+		</ul>
 
-	<div class="progress">Loading... {% img 'ajax-loader.gif' %}</div>
+		<div class="progress">Loading... {% img 'ajax-loader.gif' %}</div>
+	</div>
 </div>
 
-<div id="add">
-	<div class="toolbar">
-		<a href="#" class="cancel slidedown">Cancel</a>
+<div id="add" data-role="page">
+	<div data-role="header">
+		<a href="#" data-role="button" data-transition="slidedown">Cancel</a>
 
 		<h1>Add Expense</h1>
 	</div>
 
-	<form name="form" id="form" method="post" action="{% url create_expense_url %}">
-		{% csrf_token %}
-		<ul>
-			<li>
-				<input type="text" name="description" class="required" placeholder="Item Description" id="desc"/>
-			</li>
-			<li>
-				<input type="number" name="amount" placeholder="$0.00" class="required number" id="amount"/>
-			</li>
-			<li class="checkrow">
-				<div>Deposit <input type="hidden" name="deposit" value=""/></div>
-			</li>
-		</ul>
-		<a href="#" id="submit" class="whiteButton submitButton">Add</a>
-	</form>
+	<div data-role="content">
+		<form name="form" id="form" method="post" action="{% url create_expense_url %}">
+			{% csrf_token %}
+			<ul>
+				<li>
+					<input type="text" name="description" class="required" placeholder="Item Description" id="desc"/>
+				</li>
+				<li>
+					<input type="number" name="amount" placeholder="$0.00" class="required number" id="amount"/>
+				</li>
+				<li class="checkrow">
+					<div>Deposit? <input type="hidden" name="deposit" value=""/></div>
+				</li>
+			</ul>
+			<button type="submit">Add</button>
+		</form>
 
-	<div class="progress">Loading... {% img 'ajax-loader.gif' %}</div>
-</div>
-
-<div id="bills">
-	<div class="toolbar">
-		<h1>Bills</h1>
-		<a class="back" href="#">Back</a>
+		<div class="progress">Loading... {% img 'ajax-loader.gif' %}</div>
 	</div>
-	<ul class="edgetoedge">
-		<!--Filled in by AJAX-->
-	</ul>
 </div>
+
 </body>
 </html>

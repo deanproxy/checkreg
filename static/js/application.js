@@ -25,10 +25,10 @@ function displayExpenses(data, start, total) {
 		var expense = data.expenses[i];
 		var formattedAmount = expense.amount
 		if (!lastExpenseDate || lastExpenseDate != expense.createdAt) {
-			ul.append('<li class="sep">' + expense.createdAt + '</li>');
+			ul.append('<li data-role="list-divider">' + expense.createdAt + '</li>');
 			lastExpenseDate = expense.createdAt;
 		}
-		line = '<li>' + expense.description + '<small ';
+		line = '<li data-icon="false">' + expense.description + '<small ';
 		if (expense.amount > 0) {
 			line += 'class="positive"';
 		}
@@ -82,15 +82,15 @@ function getExpenses(callback) {
 	});
 }
 
-var jQT = new $.jQTouch({
-	icon: '/static/images/money.jpg',
-	addGlossToIcon: false,
-	startupScreen: '/static/images/loading.png',
-	statusBar: 'black',
-	touchSelector: 'li',
-	preloadImages:['/static/images/loading.png', '/static/images/spinner2.gif', '/static/images/spinner.gif',
-		'/static/images/ajax-loader.gif', '/static/css/themes/apple/img/whiteButton.png']
-});
+//var jQT = new $.jQTouch({
+//	icon: '/static/images/money.jpg',
+//	addGlossToIcon: false,
+//	startupScreen: '/static/images/loading.png',
+//	statusBar: 'black',
+//	touchSelector: 'li',
+//	preloadImages:['/static/images/loading.png', '/static/images/spinner2.gif', '/static/images/spinner.gif',
+//		'/static/images/ajax-loader.gif', '/static/css/themes/apple/img/whiteButton.png']
+//});
 
 function getTotal(callback) {
 	if (!callback) {
@@ -123,7 +123,7 @@ $(document).ready(function() {
 		var a = $(this);
 		getExpenses(function() {
 			a.removeClass();
-			jQT.goTo('#expenses', 'slide');
+			$.mobile.changePage('#expenses', {transition:'slide'});
 		});
 	});
 
@@ -133,7 +133,7 @@ $(document).ready(function() {
 			$.post($('#form').attr('action'), $(form).serialize(), function(data, textStatus) {
 				getTotal();
 				$('.progress').hide();
-				jQT.goBack('#home');
+				$.mobile.changePage('#home', {transition:'slidedown'});
 				/* Reset form */
 				$('input[name=description]').val('');
 				$('input[name=amount]').val('');
