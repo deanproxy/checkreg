@@ -5,18 +5,14 @@
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<title>Budget</title>
-{#	{% css 'jqtouch.min.css' %}#}
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.css" />
-{#	{% css 'themes/apple/theme.css' %}#}
+	{% css 'jquery.mobile-1.0b3.min.css' %}
 	{% css 'budget.css' %}
 
 	{% js 'jquery-1.6.4.min.js' %}
 	{% js 'jquery-ui-1.8.2.min.js' %}
-{#	{% js 'jqtouch.min.js' %}#}
 	{% js 'jquery.validate.min.js' %}
 	{% js 'additional-methods.js' %}
-
-	<script src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
+	{% js 'jquery.mobile-1.0b3.min.js' %}
 	{% js 'application.js' %}
 
 </head>
@@ -25,13 +21,13 @@
 <div id="home" data-role="page" role="main">
 	<div data-role="header">
 		<h1>Budget</h1>
-		<a href="#add" data-role="button" data-inlne="true" class="add slideup">+</a>
+		<a href="#add" data-role="button" data-inlne="true" data-transition="slideup" data-icon="plus" class="ui-btn-right">Add</a>
 	</div>
 	<div data-role="content">
-		<ul data-role="listview">
-			<li id="total">Total <small><strong></strong></small></li>
+		<ul data-inset="true" data-role="listview">
+			<li id="total">Total <span class="ui-li-count"></span></li>
 		</ul>
-		<ul data-role="listview">
+		<ul data-inset="true" data-role="listview">
 			<li class="arrow"><a href="#" id="goToExpenses">Expenses</a></li>
 		</ul>
 	</div>
@@ -40,21 +36,19 @@
 <div id="expenses" data-role="page">
 	<div data-role="header">
 		<h1>Expenses</h1>
-		<a href="#" data-role="button" data-rel="back">Back</a>
-		<a href="#add" data-role="button" data-transition="slideup">+</a>
+		<a href="#" data-role="button" data-rel="back" data-icon="arrow-l" class="ui-btn-left">Back</a>
+		<a href="#add" data-role="button" data-transition="slideup" data-icon="plus" class="ui-btn-right">Add</a>
 	</div>
 	<div data-role="content">
 		<ul data-role="listview">
 			{# --Filled in by AJAX  %#}
 		</ul>
-
-		<div class="progress">Loading... {% img 'ajax-loader.gif' %}</div>
 	</div>
 </div>
 
 <div id="add" data-role="page">
 	<div data-role="header">
-		<a href="#" data-role="button" data-transition="slidedown">Cancel</a>
+		<a href="#" data-rel="back" data-icon="delete" data-transition="slidedown">Cancel</a>
 
 		<h1>Add Expense</h1>
 	</div>
@@ -62,21 +56,20 @@
 	<div data-role="content">
 		<form name="form" id="form" method="post" action="{% url create_expense_url %}">
 			{% csrf_token %}
-			<ul>
+			<ul data-role="listview" data-inset="true">
 				<li>
 					<input type="text" name="description" class="required" placeholder="Item Description" id="desc"/>
 				</li>
 				<li>
 					<input type="number" name="amount" placeholder="$0.00" class="required number" id="amount"/>
 				</li>
-				<li class="checkrow">
-					<div>Deposit? <input type="hidden" name="deposit" value=""/></div>
+				<li>
+					<input type="checkbox" name="deposit"/>
+					<label>Deposit?</label>
 				</li>
 			</ul>
 			<button type="submit">Add</button>
 		</form>
-
-		<div class="progress">Loading... {% img 'ajax-loader.gif' %}</div>
 	</div>
 </div>
 

@@ -2,50 +2,16 @@ body {
 	background-color: #ddd;
 }
 
-ul li small.negative {
+ul li span.negative {
 	color: #ff3333;
 }
 
-ul li small.positive {
+ul li span.positive {
 	color: #009900;
-}
-
-.progress {
-	background-color: rgba(0, 0, 0, .7);
-	color: white;
-	font-size: 18px;
-	font-weight: bold;
-	position: absolute;
-	text-align: center;
-	width: 100%;
-	line-height: 420px;
-	height: 460px;
-	top: 0;
-	display: none;
 }
 
 label.error {
 	color: #ff3333;
-}
-
-/* Additions for separation in edge-to-edge apple ui */
-ul.edgetoedge {
-	-webkit-border-radius: 0;
-}
-
-ul.edgetoedge li {
-	clear: right;
-}
-
-ul.edgetoedge li.sep {
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(139, 159, 171, 1)), to(rgba(181, 193, 201, 1.0)));
-	border-bottom: 1px solid #b5c1c9;
-	border-top: 1px solid #b5c1c9;
-	color: #fff;
-	font-size: 16px;
-	margin: 1px 0 0 0;
-	padding: 2px 10px;
-	text-shadow: #636a6f 0 1px 0;
 }
 
 #home ul li a.active {
@@ -56,62 +22,38 @@ ul li a.active {
 	background: #fff url(../images/spinner2.gif) 100% 50% no-repeat;
 }
 
-/* Used for the tap checkbox bar... Div elements needs to be rounded if they're in the first or
-   last positions of the li elements so that they don't overrun */
-li:first-child div {
-	border-top: 0;
-	-webkit-border-top-left-radius: 8px;
-	-webkit-border-top-right-radius: 8px;
-}
-
-li:last-child div {
-	-webkit-border-bottom-left-radius: 8px;
-	-webkit-border-bottom-right-radius: 8px;
-}
-
-/* Make sure the div is space properly. */
-ul li.checkrow div {
-	padding: 12px 10px 12px 10px;
-	margin: -10px;
-	display: block;
-	overflow: hidden;
-	white-space: nowrap;
-	color: #000;
-}
-
-ul li.checkrow div:Hover {
-	cursor: pointer;
-}
-
-ul li.checkrow div.active {
-	background: #fff url(../images/check.png) 98% 50% no-repeat;
-	color: #777;
-}
-
-a.deleteItem {
-	background-image: url(../images/barButtonRed.png);
-	float: right;
-	display: block;
-	width: 0px;
-	height: 35px;
-	margin: -7px -30.3% 0 0;
-	padding: 0;
-	text-indent: -9999px;
-}
-
 #loadMore a {
 	color: #0066ff;
 }
-
-ul li small {
-	width: 30%;
-}
-
 #loadMore a div {
 	font-size: 12px;
 	color: #999999;
 }
 
-#add ul li {
-	color: #777
+/* Delete buttons */
+.deleteButton {
+	display: none;
+	border-radius: 5px;
+	float: right;
+	height: 15px;
+	line-height: 15px;
+	margin:  3px 10px 0 0;
+	padding: 0.6em;
+	z-index: 10;
+	border: 1px solid #953403;
+	background: #2567ab;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	text-shadow: 0 -1px 1px #953403;
+	text-decoration: none;
+	background-image: -moz-linear-gradient(top, #ec4a0b, #ad390c);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #ec4a0b),color-stop(1, #ad390c));
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ec4a0b', EndColorStr='#ad390c'
 }
+a.ui-link-inherit {
+	color: #fff;
+	padding: 0.6em;
+}
+
+

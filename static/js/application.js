@@ -28,27 +28,25 @@ function displayExpenses(data, start, total) {
 			ul.append('<li data-role="list-divider">' + expense.createdAt + '</li>');
 			lastExpenseDate = expense.createdAt;
 		}
-		line = '<li data-icon="false">' + expense.description + '<small ';
+		line = '<li>' + expense.description + '<span class="ui-li-count ';
 		if (expense.amount > 0) {
-			line += 'class="positive"';
+			line += 'positive';
+		} else {
+			line += 'negative'
 		}
-		line += '>';
+		line += '">';
 		line += formatCurrency(expense.amount);
-		line += '</small><a href="#id" id="' + expense.id + '" class="deleteItem">Delete</a></li>';
+		line += '</span>'
+		line += '<div id="' + expense.id + '" class="deleteButton">Delete</div>';
+		line += '</li>';
 		ul.append(line);
 	}
-	$('#expenses ul li').swipe(
-			function(evt, data) {
-				var a = $(this).find('a');
-				if (a.css('width') == '65px') {
-					a.animate({width:'0px'}, 200);
-				} else {
-					a.animate({width:'65px'}, 200);
-				}
-			}).click(function() {
-				$('a[href=#id]').animate({width:'0px'}, 200);
-			});
-	$('a[href=#id]').click(function() {
+	$('#expenses ul li').bind('swiperight', function(e) {
+		$('.deleteButton').hide();
+		var button = $(this).child('a');
+		button.show();
+	});
+	$('a.deleteButton').click(function() {
 		var a = $(this);
 		a.parent('li').hide();
 		$.ajax({
@@ -67,9 +65,11 @@ function displayExpenses(data, start, total) {
 		ul.append('<li id="loadMore"><a href="#">Load More Expenses... <div>' + remainingTotal +
 				' expenses remaining, ' + data.total + ' total</div></a></li>');
 		ul.find('#loadMore a').click(function() {
+			$.mobile.showPageLoadingMsg();
 			start += total;
 			$.getJSON('/expenses/list/', {offset:start,max:total}, function(data) {
 				displayExpenses(data, start, total);
+				$.mobile.hidePageLoadingMsg();
 			});
 		});
 	}
@@ -82,29 +82,20 @@ function getExpenses(callback) {
 	});
 }
 
-//var jQT = new $.jQTouch({
-//	icon: '/static/images/money.jpg',
-//	addGlossToIcon: false,
-//	startupScreen: '/static/images/loading.png',
-//	statusBar: 'black',
-//	touchSelector: 'li',
-//	preloadImages:['/static/images/loading.png', '/static/images/spinner2.gif', '/static/images/spinner.gif',
-//		'/static/images/ajax-loader.gif', '/static/css/themes/apple/img/whiteButton.png']
-//});
-
 function getTotal(callback) {
 	if (!callback) {
 		/* If callback wasn't provided, make it empty */
 		callback = function() {};
 	}
 	$.getJSON('/expenses/total/', function(data) {
-		var totalArea = $('#total small strong');
+		var totalArea = $('#total span');
 		totalArea.html(formatCurrency(data.amount));
-		totalArea.parent().removeClass();
 		if (data.amount < 0) {
-			totalArea.parent().addClass('negative');
+			totalArea.removeClass('positive');
+			totalArea.addClass('negative');
 		} else {
-			totalArea.parent().addClass('positive');
+			totalArea.removeClass('negative');
+			totalArea.addClass('positive');
 		}
 		callback();
 	});
@@ -120,16 +111,15 @@ $.fn.highlight = function(toColor) {
 $(document).ready(function() {
 	getTotal();
 	$('#goToExpenses').click(function(e) {
-		var a = $(this);
+		$.mobile.showPageLoadingMsg();
 		getExpenses(function() {
-			a.removeClass();
 			$.mobile.changePage('#expenses', {transition:'slide'});
 		});
 	});
 
 	$('#form').validate({
 		submitHandler: function(form) {
-			$('.progress').show();
+			$.mobile.showPageLoadingMsg();
 			$.post($('#form').attr('action'), $(form).serialize(), function(data, textStatus) {
 				getTotal();
 				$('.progress').hide();
@@ -140,14 +130,10 @@ $(document).ready(function() {
 				$('input[name=deposit]').val('');
 			}).error(function() {
 				alert('Oops. Could not create.');
-				$('.progress').hide();
+				$.mobile.hidePageLoadingMsg();
 			});
 			return false;
 		}
-	});
-
-	$('#submit').click(function() {
-		$('#form').submit();
 	});
 
 	/* Make the checkbox work */
