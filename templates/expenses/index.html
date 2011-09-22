@@ -1,0 +1,41 @@
+{% load common %}
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Budget</title>
+	{% css 'jquery.mobile-1.0b3.min.css' %}
+	{% css 'budget.css' %}
+
+	{% js 'jquery-1.6.4.min.js' %}
+	{% js 'jquery-ui-1.8.2.min.js' %}
+	{% js 'jquery.validate.min.js' %}
+	{% js 'additional-methods.js' %}
+	{% js 'jquery.mobile-1.0b3.min.js' %}
+	{% js 'application.js' %}
+
+	{% block extra_head %}{% endblock %}
+
+</head>
+
+<body>
+{% block content %}
+<div id="home" data-role="page" role="main">
+	<div data-role="header">
+		<h1>Budget</h1>
+		<a href="#add" data-role="button" data-inlne="true" data-transition="slideup" data-icon="plus" class="ui-btn-right">Add</a>
+	</div>
+	<div data-role="content">
+		<ul data-inset="true" data-role="listview">
+			<li id="total">Total <span class="ui-li-count"></span></li>
+		</ul>
+		<ul data-inset="true" data-role="listview">
+			<li class="arrow"><a href="{% url list_expenses_url %}" id="goToExpenses">Expenses</a></li>
+		</ul>
+	</div>
+</div>
+
+{% endblock %}
+</body>
+</html>

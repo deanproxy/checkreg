@@ -1,0 +1,21 @@
+{% extends 'expenses/index.html' %}
+{% load common %}
+
+{% block extra_head %}
+	{% js 'expenses.js' %}
+{% endblock %}
+
+{% block content %}
+<div id="expenses" data-role="page">
+	<div data-role="header">
+		<h1>Expenses</h1>
+		<a href="{% url index_url %}" data-role="button" data-icon="arrow-l" data-transition="slideright" class="ui-btn-left">Back</a>
+		<a href="{% url new_expense_url %}" data-role="button" data-transition="slideup" data-icon="plus" class="ui-btn-right">Add</a>
+	</div>
+	<div data-role="content">
+		<ul data-role="listview">
+			{% include 'expenses/_list.html' %}
+		</ul>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'expenses/index.html' %}
+{% load common %}
+{% load expense %}
+
+{% block extra_head %}
+	{% js 'form.js' %}
+{% endblock %}
+
+{% block content %}
+<div id="update" data-role="page">
+	<div data-role="header">
+		<a href="#" data-rel="back" data-icon="delete">Cancel</a>
+		<a href="#" data-rel="save" id="saveExpense" data-icon="check" class="ui-btn-right">Save</a>
+		<h1>Update Expense</h1>
+	</div>
+
+	<div data-role="content">
+		<form name="update" id="updateExpense" method="post" action="{% url update_expense_url expense.id %}">
+			{% csrf_token %}
+			<input type="hidden" name="id" value="{{ expense.id }}"/>
+			<ul data-role="listview" data-inset="true">
+				<li>
+					<input type="text" name="description" class="required" placeholder="Item Description" id="desc" value="{{ expense.description }}"/>
+				</li>
+				<li>
+					<input type="number" name="amount" placeholder="$0.00" class="required number" id="amount" value="{{ expense.amount|format_amount:0 }}"/>
+				</li>
+				<li>
+					<input type="checkbox" name="deposit" {{ expense.amount|set_checked_if_deposit }}/>
+					<label>Deposit?</label>
+				</li>
+			</ul>
+			<button type="submit" data-rel="delete" id="deleteExpense" data-theme="e">Delete</button>
+		</form>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'expenses/index.html' %}
+{% load expense %}
+
+{% block content %}
+<div id="add" data-role="page">
+	<div data-role="header">
+		<a href="#" data-rel="back" data-icon="delete" data-transition="slidedown">Cancel</a>
+
+		<h1>Add Expense</h1>
+	</div>
+
+	<div data-role="content">
+		<form name="form" id="addExpense" method="post" action="{% url create_expense_url %}">
+			{% csrf_token %}
+			<ul data-role="listview" data-inset="true">
+				<li>
+					<input type="text" name="description" class="required" placeholder="Item Description" id="desc"/>
+				</li>
+				<li>
+					<input type="number" name="amount" placeholder="$0.00" class="required number" id="amount"/>
+				</li>
+				<li>
+					<input type="checkbox" name="deposit"/>
+					<label>Deposit?</label>
+				</li>
+			</ul>
+			<button type="submit">Add</button>
+		</form>
+	</div>
+</div>
+{% endblock %}

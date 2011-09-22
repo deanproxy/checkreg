@@ -51,9 +51,8 @@ ul li a.active {
 	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #ec4a0b),color-stop(1, #ad390c));
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ec4a0b', EndColorStr='#ad390c'
 }
-a.ui-link-inherit {
-	color: #fff;
-	padding: 0.6em;
+.ui-li-count {
+	font-size: 14px;
 }
 
 

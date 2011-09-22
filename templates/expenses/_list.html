@@ -1,0 +1,17 @@
+{% load expense %}
+
+{% for expense in expenses %}
+	{% date_divider expense.created_at %}
+	<li>
+		<a href="{% url edit_expense_url expense.id %}">{{ expense.description }}</a>
+		<span class="ui-li-count {{ expense.amount|amount_type }}">${{ expense.amount|format_amount }}</span>
+	</li>
+{% endfor %}
+{% if remaining %}
+	<li id="loadMore">
+		<a href="#">
+			Loading more expenses...
+			<div>{{ remaining }} expenses remaining, {{ total }} total</div>
+		</a>
+	</li>
+{% endif %}
