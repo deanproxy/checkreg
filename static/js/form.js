@@ -1,16 +1,12 @@
 (function($) {
 
-	$(document).ready(function() {
+	$('.form').live('pageshow', function(event) {
 		$('form').validate({
 			submitHandler: function(form) {
 				$.mobile.showPageLoadingMsg();
 				$.post($(form).attr('action'), $(form).serialize(), function(data, textStatus) {
 					getTotal();
-					if (form.name === 'update') {
-						$.mobile.changePage('/expenses/list/', {transition:'slideright'});
-					} else {
-						$.mobile.changePage('/expenses/index/', {transition:'slidedown'});
-					}
+					history.back();
 				}).error(function() {
 					alert('Oops. Could not create.');
 					$.mobile.hidePageLoadingMsg();
@@ -19,18 +15,26 @@
 			}
 		});
 
-		$('#saveExpense').click(function() {
+		$('#saveUpdateExpense').click(function() {
 			$('#updateExpense').submit();
+		});
+		$('#saveNewExpense').click(function() {
+			$('#addExpense').submit();
 		});
 		$('#deleteExpense').click(function() {
 			if (confirm('Want to kill this expense?')) {
 				var id = $('input[name=id]').val();
-				$.post('/expenses/delete/' + id, {}, function() {
-					$.mobile.changePage('/expenses/list/', {transition:'slideright'});
+				var csrf_token = $('input[name=csrfmiddlewaretoken]').val();
+				$.post('/expenses/delete/' + id, {'csrfmiddlewaretoken':csrf_token}, function() {
+					getTotal();
+					history.back();
 				}).error(function() {
 					alert('Some sort of error occured. Did not delete.');
+					$.mobile.hidePageLoadingMsg();
 				});
 			}
+			return false;
 		});
 	});
+
 })(jQuery);

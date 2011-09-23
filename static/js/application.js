@@ -1,3 +1,4 @@
+
 function formatCurrency(num) {
 	num = num.toString().replace(/\$|,/g, '');
 	if (isNaN(num))
@@ -29,24 +30,9 @@ function getTotal() {
 
 $(document).ready(function() {
 	getTotal();
-//	$('#goToExpenses').click(function(e) {
-//		$.mobile.showPageLoadingMsg();
-//		getExpenses(function() {
-//			$.mobile.changePage('#expenses', {transition:'slide'});
-//		});
-//	});
-
-
 
 	/* Refresh Total box */
 	$('#total').click(function(e) {
 		getTotal();
 	});
 });
-
-/* Preload images */
-var img1 = new Image('/static/images/spinner2.gif');
-var img2 = new Image('/static/images/spinner.gif');
-var img3 = new Image('/static/images/ajax-loader.gif');
-var img4 = new Image('/static/images/loading.png');
-var img5 = new Image('/static/images/check.png');

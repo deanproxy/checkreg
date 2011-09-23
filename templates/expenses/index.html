@@ -14,8 +14,8 @@
 	{% js 'additional-methods.js' %}
 	{% js 'jquery.mobile-1.0b3.min.js' %}
 	{% js 'application.js' %}
-
-	{% block extra_head %}{% endblock %}
+	{% js 'form.js' %}
+	{% js 'expenses.js' %}
 
 </head>
 
@@ -24,7 +24,7 @@
 <div id="home" data-role="page" role="main">
 	<div data-role="header">
 		<h1>Budget</h1>
-		<a href="#add" data-role="button" data-inlne="true" data-transition="slideup" data-icon="plus" class="ui-btn-right">Add</a>
+		<a href="{% url new_expense_url %}" data-role="button" data-inlne="true" data-transition="slideup" data-icon="plus" class="ui-btn-right">Add</a>
 	</div>
 	<div data-role="content">
 		<ul data-inset="true" data-role="listview">

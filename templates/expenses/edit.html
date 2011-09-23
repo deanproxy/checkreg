@@ -1,16 +1,11 @@
-{% extends 'expenses/index.html' %}
+
 {% load common %}
 {% load expense %}
 
-{% block extra_head %}
-	{% js 'form.js' %}
-{% endblock %}
-
-{% block content %}
-<div id="update" data-role="page">
+<div id="update" class="form" data-role="page">
 	<div data-role="header">
-		<a href="#" data-rel="back" data-icon="delete">Cancel</a>
-		<a href="#" data-rel="save" id="saveExpense" data-icon="check" class="ui-btn-right">Save</a>
+		<a href="#" data-direction="reverse" data-rel="back" data-icon="delete">Cancel</a>
+		<a href="#" data-rel="save" id="saveUpdateExpense" data-icon="check" data-theme="b" class="ui-btn-right">Save</a>
 		<h1>Update Expense</h1>
 	</div>
 
@@ -30,8 +25,7 @@
 					<label>Deposit?</label>
 				</li>
 			</ul>
-			<button type="submit" data-rel="delete" id="deleteExpense" data-theme="e">Delete</button>
+			<button data-rel="delete" id="deleteExpense" data-theme="e">Delete</button>
 		</form>
 	</div>
 </div>
-{% endblock %}
