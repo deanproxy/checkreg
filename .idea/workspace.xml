@@ -65,7 +65,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/expenses/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="65" selection-start="699" selection-end="699" vertical-scroll-proportion="0.66997516">
+            <state line="2" column="21" selection-start="55" selection-end="55" vertical-scroll-proportion="0.074441686">
               <folding />
             </state>
           </provider>
@@ -638,7 +638,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed the 'load more' feature, trimmed down jquery mobile with custom build, moved update and add buttons to the form area (allows you to press enter or &quot;go&quot; on phone when typing) and delete buttons to top, added red theme for delete button." />
+    <option name="LAST_COMMIT_MESSAGE" value="adding apple startup image" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -655,6 +655,7 @@
     <MESSAGE value="worked out some kinks, getting used to jquery mobile and multi page setups" />
     <MESSAGE value="trying to get an icon for iphone going" />
     <MESSAGE value="fixed the 'load more' feature, trimmed down jquery mobile with custom build, moved update and add buttons to the form area (allows you to press enter or &quot;go&quot; on phone when typing) and delete buttons to top, added red theme for delete button." />
+    <MESSAGE value="adding apple startup image" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -757,7 +758,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/expenses/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="65" selection-start="699" selection-end="699" vertical-scroll-proportion="0.66997516">
+        <state line="2" column="21" selection-start="55" selection-end="55" vertical-scroll-proportion="0.074441686">
           <folding />
         </state>
       </provider>
