@@ -18,9 +18,6 @@
 		$('#saveUpdateExpense').click(function() {
 			$('#updateExpense').submit();
 		});
-		$('#saveNewExpense').click(function() {
-			$('#addExpense').submit();
-		});
 		$('#deleteExpense').click(function() {
 			if (confirm('Want to kill this expense?')) {
 				var id = $('input[name=id]').val();

@@ -1,4 +1,3 @@
-
 {% load common %}
 
 {% block content %}
@@ -9,7 +8,7 @@
 		<a href="{% url new_expense_url %}" data-transition="slideup" data-icon="plus" class="ui-btn-right">Add</a>
 	</div>
 	<div data-role="content">
-		<ul data-role="listview">
+		<ul id="expenseList" data-role="listview">
 			{% include 'expenses/_list.html' %}
 		</ul>
 	</div>

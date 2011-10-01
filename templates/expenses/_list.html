@@ -9,7 +9,7 @@
 {% endfor %}
 {% if remaining %}
 	<li id="loadMore">
-		<a href="#">
+		<a href="{% url more_expenses_url %}" data-offset="{{ next_offset }}">
 			Loading more expenses...
 			<div>{{ remaining }} expenses remaining, {{ total }} total</div>
 		</a>

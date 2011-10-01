@@ -5,6 +5,8 @@ from django.utils import simplejson
 from expenses.forms import ExpenseForm
 from expenses.models import Expense, Balance
 
+MAX_RETURNED_EXPENSES = 30
+
 def index(request):
 	return render(request, 'expenses/index.html')
 
@@ -23,23 +25,30 @@ def total(request):
 def list(request):
 	""" render the list page with 30 entries """
 
-	expenses = Expense.objects.all().order_by('created_at').reverse()[0:29]
+	next_offset = 0
+	expenses = Expense.objects.all().order_by('created_at').reverse()[0:MAX_RETURNED_EXPENSES]
 	total = Expense.objects.count()
 	remaining = total - len(expenses)
-	return render(request, 'expenses/list.html', {'expenses':expenses, 'total':total, 'remaining':remaining})
+	if remaining:
+		next_offset = MAX_RETURNED_EXPENSES
+	return render(request, 'expenses/list.html', {'expenses':expenses, 'total':total,
+												  'remaining':remaining, 'next_offset':next_offset})
 
 def more(request):
 	""" sends back more expenses """
 
+	next_offset = 0
 	offset = int(request.GET['offset']) or 0
-	max = int(request.GET['max']) or 30
 	total = Expense.objects.count()
 
 	# REMEMBER: The way the slice works on a QuerySet is [start_pos:end_pos]
-	expenses = Expense.objects.all().order_by('created_at').reverse()[offset:max + offset]
+	expenses = Expense.objects.all().order_by('created_at').reverse()[offset:MAX_RETURNED_EXPENSES + offset]
 	remaining = total - (offset + len(expenses))
+	if remaining:
+		next_offset = MAX_RETURNED_EXPENSES + offset
 
-	return render(request, 'expenses/_list.html', {'expenses':expenses, 'total':total, 'remaining':remaining})
+	return render(request, 'expenses/_list.html', {'expenses':expenses, 'total':total,
+												   'remaining':remaining, 'next_offset':next_offset})
 
 def new(request):
 	return render(request, 'expenses/new.html')

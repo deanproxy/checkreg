@@ -1,20 +1,25 @@
 (function($) {
 
 	function loadMoreClickHandler() {
-		$('#loadMore').click(function() {
+		$('#loadMore a').click(function() {
 			$.mobile.showPageLoadingMsg();
-			$.get('/expenses/more/', function(data) {
-				var ul = $(this).parent('ul');
-				$(this).remove();
+			$.get($(this).attr('href'), 'offset=' + $(this).attr('data-offset'), function(data) {
+				var ul = $('#expenseList');
+				$('#loadMore').remove();
 				ul.append(data);
 				ul.listview('refresh');
 				$.mobile.hidePageLoadingMsg();
+				/* Element gets redrawn so call ourselves again. */
 				loadMoreClickHandler();
+			}).error(function() {
+				alert('Something bad happend... Sorry.');
+				$.mobile.hidePageLoadingMsg();
 			});
+			return false;
 		});
 	}
 
-	$('#list').live('pageshow', function() {
+	$('#expenses').live('pageshow', function() {
 		loadMoreClickHandler();
 	});
 
