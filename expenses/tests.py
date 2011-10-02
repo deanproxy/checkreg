@@ -214,13 +214,3 @@ class TemplateTagsTest(TestCase):
 		date = datetime(2004, 2, 1)
 		response = expense.date_divider(context, date)
 		self.assertTrue(response != '')
-
-
-
-
-
-
-
-
-
-
