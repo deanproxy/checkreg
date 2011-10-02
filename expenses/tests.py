@@ -4,11 +4,13 @@ when you run "manage.py test".
 
 Replace this with more appropriate tests for your application.
 """
+from datetime import datetime
 
 from django.test import TestCase
 from django.test.client import Client
 from django.utils import simplejson
 from expenses.models import Balance, Expense
+from expenses.templatetags import expense
 
 
 class ExpenseTest(TestCase):
@@ -153,6 +155,68 @@ class ExpenseTest(TestCase):
 
 		response = self.client.get('/expenses/edit/22')
 		self.assertEqual(response.status_code, 404)
+
+
+class TemplateTagsTest(TestCase):
+	def test_format_amount(self):
+		"""
+		Test format_amount tag.
+			- Should return amount with 2 decimal points
+			- When show_negative=False, should strip off the - in front of amount
+		"""
+
+		amount = expense.format_amount(2.001)
+		self.assertEqual(amount, '2.00')
+		amount = expense.format_amount(-2.1010, show_negative=False)
+		self.assertEqual(amount, '2.10')
+		amount = expense.format_amount(-2.1010)
+		self.assertEqual(amount, '-2.10')
+
+	def test_set_checked(self):
+		"""
+		Test set_checked_if_deposit filter
+			- Should return 'checked' if amount is positive
+			- Should return empty if amount is negative
+		"""
+
+		result = expense.set_checked_if_deposit(-2)
+		self.assertEqual(result, '')
+		result = expense.set_checked_if_deposit(2.01)
+		self.assertEqual(result, 'checked')
+
+	def test_amount_type(self):
+		"""
+		Test amount_type filter
+			- Should return word 'negative' or 'positive' depending on amount signedness
+		"""
+
+		result = expense.amount_type(-2)
+		self.assertEqual(result, 'negative')
+		result = expense.amount_type(2.020102)
+		self.assertEqual(result, 'positive')
+
+	def test_date_divider(self):
+		"""
+		Test date divider is provided (an li element)
+			- Should only return divider when date differs from last used
+		function depends on a context, so must mock one up.
+		"""
+
+		class Context(object):
+			dicts = [{}]
+
+		date = datetime(2004, 1, 1)
+		context = Context()
+		response = expense.date_divider(context, date)
+		self.assertTrue(response != '')
+		response = expense.date_divider(context, date)
+		self.assertEqual(response, '')
+		date = datetime(2004, 2, 1)
+		response = expense.date_divider(context, date)
+		self.assertTrue(response != '')
+
+
+
 
 
 
