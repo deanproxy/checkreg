@@ -52,7 +52,7 @@ ul li a.active {
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ec4a0b', EndColorStr='#ad390c'
 }
 .ui-li-has-count .ui-li-count {
-	font-size: 1em;
+	font-size: 14px;
 }
 
 /* Theme for red buttons in jQuery mobile by irohiroki (https://gist.github.com/909284) */

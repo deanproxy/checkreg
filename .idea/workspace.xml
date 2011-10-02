@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de4d9156-deaf-4265-84cc-6f073d84ca05" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/404.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TODO" afterPath="$PROJECT_DIR$/TODO" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expenses/forms.py" afterPath="$PROJECT_DIR$/expenses/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expenses/models.py" afterPath="$PROJECT_DIR$/expenses/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expenses/tests.py" afterPath="$PROJECT_DIR$/expenses/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expenses/views.py" afterPath="$PROJECT_DIR$/expenses/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/budget.css" afterPath="$PROJECT_DIR$/static/css/budget.css" />
     </list>
     <ignored path="checkreg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,10 +89,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="tests.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/expenses/tests.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="50" selection-start="5207" selection-end="5207" vertical-scroll-proportion="1.6363636">
+            <state line="122" column="55" selection-start="4049" selection-end="4049" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="budget.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/css/budget.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="19" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.54545456">
               <folding />
             </state>
           </provider>
@@ -146,7 +150,6 @@
       <list>
         <option value="$PROJECT_DIR$/static/js/application.js" />
         <option value="$PROJECT_DIR$/templates/expenses/new.html" />
-        <option value="$PROJECT_DIR$/static/css/budget.css" />
         <option value="$PROJECT_DIR$/templates/expenses/edit.html" />
         <option value="$PROJECT_DIR$/static/js/form.js" />
         <option value="$PROJECT_DIR$/expenses/urls.py" />
@@ -160,6 +163,7 @@
         <option value="$PROJECT_DIR$/expenses/views.py" />
         <option value="$PROJECT_DIR$/templates/404.html" />
         <option value="$PROJECT_DIR$/expenses/tests.py" />
+        <option value="$PROJECT_DIR$/static/css/budget.css" />
       </list>
     </option>
   </component>
@@ -585,9 +589,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="817" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32904148" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32904148" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -634,7 +638,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="removing caching" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix font size for amount bubble, it was too small" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -654,6 +658,8 @@
     <MESSAGE value="adding apple startup image" />
     <MESSAGE value="trying to do caching..." />
     <MESSAGE value="removing caching" />
+    <MESSAGE value="added unit tests for the Expenses view and fixed some potential bugs in the process." />
+    <MESSAGE value="fix font size for amount bubble, it was too small" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -669,13 +675,6 @@
     <entry file="file://$PROJECT_DIR$/static/js/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="34" selection-start="864" selection-end="864" vertical-scroll-proportion="0.47630924">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/budget.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="0" selection-start="1331" selection-end="1331" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -766,7 +765,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/expenses/tests.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="50" selection-start="5207" selection-end="5207" vertical-scroll-proportion="1.6363636">
+        <state line="122" column="55" selection-start="4049" selection-end="4049" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/budget.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="19" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.54545456">
           <folding />
         </state>
       </provider>
