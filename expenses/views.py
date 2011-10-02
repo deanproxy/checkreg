@@ -57,11 +57,7 @@ def create(request):
 	""" Create an expense. Update the current Balance. """
 
 	status = 201
-	form_data = request.POST.copy()
-	# Make sure the amount reflects whether we're a deposit or not...
-	if 'deposit' not in form_data:
-		form_data['amount'] = -float(form_data['amount'])
-	form = ExpenseForm(form_data)
+	form = ExpenseForm(request.POST)
 	if form.is_valid():
 		expense = form.save()
 		try:
@@ -85,13 +81,8 @@ def update(request, id):
 	status = 201
 	expense = get_object_or_404(Expense, pk=id)
 
-	form_data = request.POST.copy()
 	old_amount = expense.amount
-
-	# Make sure the amount reflects whether we're a deposit or not...
-	if 'deposit' not in form_data:
-		form_data['amount'] = -float(form_data['amount'])
-	form = ExpenseForm(form_data, instance=expense)
+	form = ExpenseForm(request.POST, instance=expense)
 	if form.is_valid():
 		new_expense = form.save()
 		try:
