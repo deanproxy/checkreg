@@ -51,8 +51,8 @@ ul li a.active {
 	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #ec4a0b),color-stop(1, #ad390c));
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ec4a0b', EndColorStr='#ad390c'
 }
-.ui-li-count {
-	font-size: 14px;
+.ui-li-has-count .ui-li-count {
+	font-size: 1em;
 }
 
 /* Theme for red buttons in jQuery mobile by irohiroki (https://gist.github.com/909284) */
