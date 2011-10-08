@@ -1,9 +1,9 @@
 checkreg - mobile check registry
 ================================
 
-<span style="padding:10px">![checkreg screenshot1](http://deanproxy.com/static/images/checkreg/1.png "Home Screen")</span>
-<span style="padding:10px">![checkreg screenshot2](http://deanproxy.com/static/images/checkreg/2.png "Expenses Screen")</span>
-<span style="padding:10px">![checkreg screenshot3](http://deanproxy.com/static/images/checkreg/3.png "Add Screen")</span>
+![checkreg screenshot1](http://deanproxy.com/static/images/checkreg/1.png "Home Screen")
+![checkreg screenshot2](http://deanproxy.com/static/images/checkreg/2.png "Expenses Screen")
+![checkreg screenshot3](http://deanproxy.com/static/images/checkreg/3.png "Add Screen")
 
 This was a simple app created by me to track purchases between my wife and I
 before they hit our bank account.  It gives us a way to enter a purchase
