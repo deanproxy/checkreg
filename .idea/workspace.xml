@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="de4d9156-deaf-4265-84cc-6f073d84ca05" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expenses/tests.py" afterPath="$PROJECT_DIR$/expenses/tests.py" />
     </list>
     <ignored path="checkreg.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -607,7 +606,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="unit tests for tags and filters" />
+    <option name="LAST_COMMIT_MESSAGE" value="crazy whitespace" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -630,6 +629,7 @@
     <MESSAGE value="added unit tests for the Expenses view and fixed some potential bugs in the process." />
     <MESSAGE value="fix font size for amount bubble, it was too small" />
     <MESSAGE value="unit tests for tags and filters" />
+    <MESSAGE value="crazy whitespace" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
