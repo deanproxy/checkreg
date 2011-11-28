@@ -1,0 +1,14 @@
+#jqt ul li small.negative,
+#jqt ul li.arrow small.negative {
+	color: #ff3333;
+}
+
+#jqt ul li small.positive, 
+#jqt ul li.arrow small.positive {
+	color: #009900;
+}
+
+#jqt ul li.arrow small.counter {
+    background-color: #fff;
+}
+
