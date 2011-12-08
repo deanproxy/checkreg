@@ -7,6 +7,10 @@ from expenses.models import Expense, Balance
 
 MAX_RETURNED_EXPENSES = 30
 
+
+def breakfast(talk):
+    talk()
+
 def index(request):
 	return render(request, 'expenses/index.html')
 
