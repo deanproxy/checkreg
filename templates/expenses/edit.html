@@ -18,7 +18,7 @@
 					<input type="text" name="description" class="required" placeholder="Item Description" id="desc" value="{{ expense.description }}"/>
 				</li>
 				<li>
-					<input type="number" name="amount" placeholder="$0.00" class="required number" id="amount" value="{{ expense.amount|format_amount:0 }}"/>
+					<input type="number" name="amount" placeholder="$0.00" class="required number" id="amount" step="0.01" value="{{ expense.amount|format_amount:0 }}"/>
 				</li>
 				<li>
 					<input type="checkbox" name="deposit" {{ expense.amount|set_checked_if_deposit }}/>
